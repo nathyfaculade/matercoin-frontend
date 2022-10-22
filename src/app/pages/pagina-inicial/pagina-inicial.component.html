@@ -1,0 +1,198 @@
+<div class="grid">
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-cyan-600 font-medium mb-3"
+                        >Tranferências</span
+                    >
+                    <div class="text-900 font-medium text-xl">
+                        {{ transferencias }}
+                    </div>
+                </div>
+                <div
+                    class="flex align-items-center justify-content-center bg-cyan-100 border-round"
+                    [ngStyle]="{ width: '2.5rem', height: '2.5rem' }"
+                >
+                    <i
+                        class="pi pi-arrow-right-arrow-left text-cyan-600 text-xl"
+                    ></i>
+                </div>
+            </div>
+            <span class="text-surface-900">Trocas realizadas neste mês</span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span
+                        class="block text-purple-500 text-400 font-medium mb-3"
+                        >Professores</span
+                    >
+                    <div class="text-900 font-medium text-xl">
+                        {{ professores }}
+                    </div>
+                </div>
+                <div
+                    class="flex align-items-center justify-content-center bg-purple-100 border-round"
+                    [ngStyle]="{ width: '2.5rem', height: '2.5rem' }"
+                >
+                    <i class="pi pi-user text-purple-500 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-surface-900">MaterCoins com professores</span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-pink-600 font-medium mb-3"
+                        >Alunos</span
+                    >
+                    <div class="text-900 font-medium text-xl">{{ alunos }}</div>
+                </div>
+                <div
+                    class="flex align-items-center justify-content-center bg-pink-100 border-round"
+                    [ngStyle]="{ width: '2.5rem', height: '2.5rem' }"
+                >
+                    <i class="pi pi-users text-pink-600 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-surface-900">MaterCoins com alunos</span>
+        </div>
+    </div>
+    <div class="col-12 lg:col-6 xl:col-3">
+        <div class="card mb-0">
+            <div class="flex justify-content-between mb-3">
+                <div>
+                    <span class="block text-green-500 font-medium mb-3"
+                        >Total de MaterCoins</span
+                    >
+                    <div class="text-900 font-medium text-xl">{{ total }}</div>
+                </div>
+                <div
+                    class="flex align-items-center justify-content-center bg-green-100 border-round"
+                    [ngStyle]="{ width: '2.5rem', height: '2.5rem' }"
+                >
+                    <i class="pi pi-users text-green-600 text-xl"></i>
+                </div>
+            </div>
+            <span class="text-surface-900">Moedas ativas</span>
+        </div>
+    </div>
+
+    <div class="col-12 xl:col-6">
+        <div class="card">
+            <div>
+                <span class="block text-surface-900 font-medium mb-3"
+                    >Notificação</span
+                >
+            </div>
+
+            <span class="block text-600 font-medium mb-3">Hoje</span>
+            <ul class="p-0 mx-0 mt-0 mb-4 list-none">
+                <li
+                    *ngFor="let item of movimentacoes"
+                    class="flex align-items-center py-2 border-bottom-1 surface-border"
+                >
+                    <div
+                        class="w-3rem h-3rem flex align-items-center justify-content-center bg-blue-100 border-circle mr-3 flex-shrink-0"
+                    >
+                        <i
+                            class="pi pi-arrow-right-arrow-left text-xl text-blue-500"
+                        ></i>
+                    </div>
+                    <span class="text-900 line-height-3">
+                        <strong>{{ item.origem.nome }}</strong>
+                        <span class="text-700">
+                            transferiu
+                            <span class="text-blue-500">1 MaterCoin </span>
+                            para
+                        </span>
+                        <strong>{{ item.destino.nome }}</strong>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="col-12 xl:col-6">
+        <div class="card">
+            <div>
+                <span class="block text-surface-900 font-medium mb-3"
+                    >Ranking de aquisição dos alunos</span
+                >
+            </div>
+
+            <span class="block text-600 font-medium mb-3">Hoje</span>
+            <ul class="p-0 mx-0 mt-0 mb-4 list-none">
+                <li
+                    class="flex align-items-center py-2 border-bottom-1 surface-border"
+                >
+                    <div
+                        class="w-3rem h-3rem flex align-items-center justify-content-center bg-blue-100 border-circle mr-3 flex-shrink-0"
+                    >
+                        <i
+                            class="pi pi-arrow-right-arrow-left text-xl text-blue-500"
+                        ></i>
+                    </div>
+                    <span class="text-900 line-height-3"
+                        >Richard Jones
+                        <span class="text-700">
+                            has purchased a blue t-shirt for
+                            <span class="text-blue-500">79$</span></span
+                        >
+                    </span>
+                </li>
+                <li class="flex align-items-center py-2">
+                    <div
+                        class="w-3rem h-3rem flex align-items-center justify-content-center bg-orange-100 border-circle mr-3 flex-shrink-0"
+                    >
+                        <i class="pi pi-download text-xl text-orange-500"></i>
+                    </div>
+                    <span class="text-700 line-height-3"
+                        >Your request for withdrawal of
+                        <span class="text-blue-500 font-medium">2500$</span> has
+                        been initiated.</span
+                    >
+                </li>
+            </ul>
+
+            <span class="block text-600 font-medium mb-3">YESTERDAY</span>
+            <ul class="p-0 m-0 list-none">
+                <li
+                    class="flex align-items-center py-2 border-bottom-1 surface-border"
+                >
+                    <div
+                        class="w-3rem h-3rem flex align-items-center justify-content-center bg-blue-100 border-circle mr-3 flex-shrink-0"
+                    >
+                        <i class="pi pi-dollar text-xl text-blue-500"></i>
+                    </div>
+                    <span class="text-900 line-height-3"
+                        >Keyser Wick
+                        <span class="text-700">
+                            has purchased a black jacket for
+                            <span class="text-blue-500">59$</span></span
+                        >
+                    </span>
+                </li>
+                <li
+                    class="flex align-items-center py-2 border-bottom-1 surface-border"
+                >
+                    <div
+                        class="w-3rem h-3rem flex align-items-center justify-content-center bg-pink-100 border-circle mr-3 flex-shrink-0"
+                    >
+                        <i class="pi pi-question text-xl text-pink-500"></i>
+                    </div>
+                    <span class="text-900 line-height-3"
+                        >Jane Davis<span class="text-700">
+                            has posted a new questions about your product.</span
+                        ></span
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
