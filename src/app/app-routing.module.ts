@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { NotfoundComponent } from './demo/components/notfound/notfound.component';
 import { AppLayoutComponent } from "./layout/app.layout.component";
 import { PaginaInicialComponent } from './pages/pagina-inicial/pagina-inicial.component';
+import { MoedasListaComponent } from './pages/moedas/moedas-lista/moedas-lista.component';
+
 
 @NgModule({
     imports: [
@@ -11,6 +13,8 @@ import { PaginaInicialComponent } from './pages/pagina-inicial/pagina-inicial.co
                 path: '', component: AppLayoutComponent,
                 children: [
                     { path: '', component: PaginaInicialComponent },
+                    //Cadastro de moedas
+                    { path: 'moedas', component: MoedasListaComponent},
                     { path: 'dash', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UikitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },

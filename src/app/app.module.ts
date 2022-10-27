@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppLayoutModule } from './layout/app.layout.module';
@@ -13,16 +13,25 @@ import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import { PaginaInicialComponent } from './pages/pagina-inicial/pagina-inicial.component';
 import { PaginaInicialModule } from './pages/pagina-inicial/pagina-inicial.module';
+import { BaseListaComponent } from './pages/base-lista/base-lista.component';
+import { BaseCadastroComponent } from './pages/base-cadastro/base-cadastro.component';
+import { MoedasModule } from './pages/moedas/moedas.module';
+import { CofreMatercoinComponent } from './pages/moedas/cofre-matercoin/cofre-matercoin.component';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent,
+        AppComponent, NotfoundComponent, BaseListaComponent, BaseCadastroComponent, CofreMatercoinComponent
     ],
     imports: [
         AppRoutingModule,
         AppLayoutModule,
-        PaginaInicialModule
+        PaginaInicialModule,
+        MoedasModule,
+        CommonModule,
+        BrowserModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

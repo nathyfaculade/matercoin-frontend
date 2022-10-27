@@ -19,15 +19,19 @@ export class AppMenuComponent implements OnInit {
                 items: [
                     { label: 'Dashboard', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/'] },
 
+                    { label: 'Cadastro de moedas', icon: 'pi pi-fw pi-dollar', routerLink: ['/moedas'] },
+
                     { label: 'Cofre MaterCoin', icon: 'pi pi-fw pi-bitcoin', routerLink: ['/cofre-matercoin'] },
 
-                    { label: 'Rastreio de Moedas', icon: 'pi pi-fw pi-list', routerLink: ['/movimentacao'] },
+                    { label: 'Rastreio de Moedas', icon: 'pi pi-fw pi-map-marker', routerLink: ['/movimentacao'] },
+
+                    { label: 'Minhas movimentações', icon: 'pi pi-fw pi-chart-line', routerLink: ['/movimentacao'] },
 
                     { label: 'Critérios de aquisição', icon: 'pi pi-fw pi-list', routerLink: ['/usuario'] },
 
                     { label: 'Condições de troca', icon: 'pi pi-fw pi-ticket', routerLink: ['/usuario'] },
 
-                    { label: 'Baixa semestral', icon: 'pi pi-fw pi-list', routerLink: ['/usuario'] },
+                    { label: 'Baixa semestral', icon: 'pi pi-fw pi-pencil', routerLink: ['/usuario'] },
 
                 ]
             },

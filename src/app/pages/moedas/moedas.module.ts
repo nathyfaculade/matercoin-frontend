@@ -10,8 +10,7 @@ import { CofreMatercoinComponent } from './cofre-matercoin/cofre-matercoin.compo
 @NgModule({
   declarations: [
     MoedasListaComponent,
-    MoedasCadastrosComponent,
-    CofreMatercoinComponent
+    MoedasCadastrosComponent
   ],
   imports: [
     CommonModule,
