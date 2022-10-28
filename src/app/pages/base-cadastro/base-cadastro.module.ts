@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BaseCadastroComponent } from './base-cadastro.component';
 import { FormsModule } from '@angular/forms';
+import { DividerModule } from 'primeng/divider';
 
 
 
@@ -9,7 +10,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [BaseCadastroComponent],
   imports: [
     FormsModule,
-    CommonModule
+    CommonModule,
+    DividerModule
   ], exports:[BaseCadastroComponent]
 })
 export class BaseCadastroModule { }
