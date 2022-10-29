@@ -2,37 +2,33 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AbstractService } from 'src/app/service/abstract.service';
 
 @Component({
-  selector: 'app-base-lista',
-  templateUrl: './base-lista.component.html',
-  styleUrls: ['./base-lista.component.scss']
+    selector: 'app-base-lista',
+    templateUrl: './base-lista.component.html',
+    styleUrls: ['./base-lista.component.scss'],
 })
-export class BaseListaComponent<T, S extends AbstractService<T>> implements OnInit {
+export class BaseListaComponent<T, S extends AbstractService<T>>
+    implements OnInit
+{
+    @Input()
+    service!: S;
 
     @Input()
-    service: S | undefined;
+    objs: T[] = [];
 
     @Input()
-    obj: S | undefined;
+    titulo: string  = "Matercoin";
 
     @Input()
-    titulo: S | undefined;
+    cols: any[] = []
 
-    @Input()
-    editar: S | undefined;
+    editar() {}
 
-    @Input()
-    excluir: S | undefined;
+    excluir() {}
+    adicionar() {}
 
-    @Input()
-    adicionar: S | undefined;
+    caregar() {}
 
-    @Input()
-    caregar: S | undefined;
+    constructor() {}
 
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+    ngOnInit(): void {}
 }

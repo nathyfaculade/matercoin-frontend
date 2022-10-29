@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BaseCadastroComponent } from './base-cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { DividerModule } from 'primeng/divider';
+import {AutoCompleteModule} from 'primeng/autocomplete';
 
 
 
@@ -14,5 +15,7 @@ import { DividerModule } from 'primeng/divider';
     DividerModule
   ], exports:[BaseCadastroComponent]
 })
+
+
 export class BaseCadastroModule { }
 
