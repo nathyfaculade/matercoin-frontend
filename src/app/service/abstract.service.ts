@@ -1,3 +1,4 @@
+import { ISearchParam } from './../model/isearch-param';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -8,25 +9,26 @@ import { __values } from 'tslib';
   providedIn: 'root'
 })
 export abstract class AbstractService<T> {
-    http: HttpClient
-    abstract endpoint: string;
+  http: HttpClient
+  abstract endpoint: string;
 
-    getToken(): string{
-      const token = localStorage.getItem("token")
-      return token || ""
-    }
+  getToken(): string {
+    const token = localStorage.getItem("token")
+    return token || ""
+  }
 
-    public static setToken(value: string){
-      localStorage.setItem("token", value)
-    }
+  public static setToken(value: string) {
+    localStorage.setItem("token", value)
+  }
 
-    getAll(): Observable<T[]> {
-        const header = new HttpHeaders();
-        header.append("token", this.getToken() )
-        return this.http.get<T[]>(`${ environment.api }/${this.endpoint}`,  { headers: header })
-    }
+  getAll(searchParams: ISearchParam[] = []): Observable<T[]> {
+    const sp = { params: searchParams };
+    const header = new HttpHeaders();
+    header.append("token", this.getToken())
+    return this.http.get<any[]>(`${environment.api}/${this.endpoint}`, { headers: header })
+  }
 
-    constructor(http: HttpClient) {
-        this.http = http;
-     }
+  constructor(http: HttpClient) {
+    this.http = http;
+  }
 }
