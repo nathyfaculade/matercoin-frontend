@@ -1,24 +1,21 @@
-<div class="grid">
-    <div class="col-12 lg:col-6 xl:col-3">
-        <div class="card mb-0">
-            <div class="flex justify-content-between mb-3">
-                <div>
-                    <span class="block text-cyan-600 font-medium mb-3"
-                        >Tranferências</span
-                    >
-                    <div class="text-900 font-medium text-xl">
-                    </div>
-                </div>
-                <div
-                    class="flex align-items-center justify-content-center bg-cyan-100 border-round"
-                    [ngStyle]="{ width: '2.5rem', height: '2.5rem' }"
+<app-base-lista
+    [titulo]="titulo"
+    [objs]="objs"
+    [service]="service"
+    [cols]="cols"
+>
+<p-card>
+    <div class="grid">
+        <div class="col-fixed">
+            <i class="pi pi-filter"></i>
+        </div>
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3"
+                    >Filtros</span
                 >
-                    <i
-                        class="pi pi-arrow-right-arrow-left text-cyan-600 text-xl"
-                    ></i>
-                </div>
-            </div>
-            <span class="text-surface-900">Trocas realizadas neste mês</span>
         </div>
     </div>
-</div>
+Content
+</p-card>
+
+</app-base-lista>

@@ -4,6 +4,8 @@ import { MoedasListaComponent } from './moedas-lista/moedas-lista.component';
 import { MoedasCadastrosComponent } from './moedas-cadastros/moedas-cadastros.component';
 import { FormsModule } from '@angular/forms';
 import { CofreMatercoinComponent } from './cofre-matercoin/cofre-matercoin.component';
+import { BaseListaModule } from '../base-lista/base-lista.module';
+import { CardModule } from 'primeng/card';
 
 
 
@@ -14,7 +16,9 @@ import { CofreMatercoinComponent } from './cofre-matercoin/cofre-matercoin.compo
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BaseListaModule,
+    CardModule
   ]
 })
 export class MoedasModule { }

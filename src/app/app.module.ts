@@ -23,7 +23,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, BaseListaComponent, BaseCadastroComponent, CofreMatercoinComponent
+        AppComponent, NotfoundComponent, CofreMatercoinComponent
     ],
     imports: [
         AppRoutingModule,
