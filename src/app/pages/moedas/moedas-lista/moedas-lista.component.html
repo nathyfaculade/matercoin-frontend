@@ -14,8 +14,15 @@
                     >Filtros</span
                 >
         </div>
+
+
     </div>
-Content
+    <div class="grid">
+        <div class="col-2">
+            <label for="drop-lotes">Número de Série</label>
+            <p-dropdown id="drop-lotes" [options]="lotes" [(ngModel)]="lote"></p-dropdown>
+        </div>
+    </div>
 </p-card>
 
 </app-base-lista>

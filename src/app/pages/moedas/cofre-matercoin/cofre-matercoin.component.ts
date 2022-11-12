@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Moeda } from 'src/app/model/moeda';
+import { Periodo } from 'src/app/model/periodo';
 
 @Component({
   selector: 'app-cofre-matercoin',
@@ -11,6 +12,7 @@ export class CofreMatercoinComponent implements OnInit {
     professores = 0;
     alunos = 0;
     total = 0;
+    descricao!: Periodo;
 
     moeda: Moeda[] = [];
   constructor() { }

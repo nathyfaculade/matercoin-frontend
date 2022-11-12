@@ -21,14 +21,24 @@ export class BaseListaComponent<T, S extends AbstractService<T>>
     @Input()
     cols: any[] = []
 
+    @Input()
+    params = []
+
+
     editar() {}
 
     excluir() {}
     adicionar() {}
 
-    caregar() {}
+    carregar() {
+        this.service.getAll(this.params).subscribe(lst => {
+            this.objs = [...lst];
+        })
+    }
 
     constructor() {}
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.carregar()
+    }
 }

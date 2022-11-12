@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CofreMatercoinComponent } from './cofre-matercoin/cofre-matercoin.component';
 import { BaseListaModule } from '../base-lista/base-lista.module';
 import { CardModule } from 'primeng/card';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 
@@ -18,7 +19,8 @@ import { CardModule } from 'primeng/card';
     CommonModule,
     FormsModule,
     BaseListaModule,
-    CardModule
+    CardModule,
+    DropdownModule
   ]
 })
 export class MoedasModule { }

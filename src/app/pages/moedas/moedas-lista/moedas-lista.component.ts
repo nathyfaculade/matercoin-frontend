@@ -8,6 +8,8 @@ import { MoedasService } from 'src/app/service/moedas.service';
     styleUrls: ['./moedas-lista.component.scss'],
 })
 export class MoedasListaComponent implements OnInit {
+    lote = "A";
+    lotes = ["A" , "B", "C"]
     titulo = 'Cadastro de moedas';
     objs: Moeda[] = [];
     cols = [

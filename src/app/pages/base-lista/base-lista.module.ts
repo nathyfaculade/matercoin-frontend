@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { BaseListaComponent } from './base-lista.component';
 import { CardModule } from 'primeng/card';
 import { TableModule } from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {DropdownModule} from 'primeng/dropdown';
 
 
 
@@ -13,7 +15,9 @@ import { TableModule } from 'primeng/table';
     FormsModule,
     CommonModule,
     CardModule,
-    TableModule
+    TableModule,
+    ButtonModule,
+    DropdownModule
   ], exports: [ BaseListaComponent]
 })
 export class BaseListaModule {}
