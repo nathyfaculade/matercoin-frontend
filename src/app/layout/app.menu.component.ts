@@ -23,11 +23,11 @@ export class AppMenuComponent implements OnInit {
 
                     { label: 'Cofre MaterCoin', icon: 'pi pi-fw pi-bitcoin', routerLink: ['/cofre-matercoin'] },
 
-                    { label: 'Rastreio de Moedas', icon: 'pi pi-fw pi-map-marker', routerLink: ['/movimentacao'] },
+                    { label: 'Rastreio de Moedas', icon: 'pi pi-fw pi-map-marker', routerLink: ['/movimentos'] },
 
-                    { label: 'Minhas movimentações', icon: 'pi pi-fw pi-chart-line', routerLink: ['/movimentacao'] },
+                    { label: 'Minhas movimentações', icon: 'pi pi-fw pi-chart-line', routerLink: ['/movimentos'] },
 
-                    { label: 'Critérios de aquisição', icon: 'pi pi-fw pi-list', routerLink: ['/usuario'] },
+                    { label: 'Meus critérios', icon: 'pi pi-fw pi-list', routerLink: ['/usuario'] },
 
                     { label: 'Condições de troca', icon: 'pi pi-fw pi-ticket', routerLink: ['/usuario'] },
 
