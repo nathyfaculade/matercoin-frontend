@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AbstractService } from 'src/app/service/abstract.service';
 
 @Component({
@@ -24,11 +25,15 @@ export class BaseListaComponent<T, S extends AbstractService<T>>
     @Input()
     params = []
 
+    @Input()
+    urlCad = "";
 
     editar() {}
 
     excluir() {}
-    adicionar() {}
+    adicionar() {
+        this.router.navigate([this.urlCad]);
+    }
 
     carregar() {
         this.service.getAll(this.params).subscribe(lst => {
@@ -36,7 +41,9 @@ export class BaseListaComponent<T, S extends AbstractService<T>>
         })
     }
 
-    constructor() {}
+    constructor(
+        private router: Router
+    ) {}
 
     ngOnInit(): void {
         this.carregar()

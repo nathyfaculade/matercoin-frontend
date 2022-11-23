@@ -17,9 +17,12 @@ export class MoedasListaComponent implements OnInit {
         { field: 'nroSerie', header: 'Número de série', type: 'text' },
         { field: 'ativo', header: 'Situação', type: 'function' }, // TODO: implementar função para verificar se é perdido.
         { field: '', header: 'Ações', type: 'buttons' },
-    ]
+    ];
+
 
     constructor(public service: MoedasService) {}
+
+    urlCad = "cad-moedas";
 
     ngOnInit(): void {}
 }

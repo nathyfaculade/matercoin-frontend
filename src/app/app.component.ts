@@ -8,7 +8,7 @@ import { AbstractService } from './service/abstract.service';
 export class AppComponent {
 
     constructor(private primengConfig: PrimeNGConfig) {
-        AbstractService.setToken("abc123")
+        //AbstractService.setToken("abc123")
     }
 
     ngOnInit() {

@@ -14,5 +14,5 @@ export interface Moeda {
     usuario: Usuario;
     createdAt: Date;
     updatedAt: Date;
-
+    lote?
 }

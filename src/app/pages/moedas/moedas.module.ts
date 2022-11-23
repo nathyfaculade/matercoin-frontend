@@ -7,6 +7,9 @@ import { CofreMatercoinComponent } from './cofre-matercoin/cofre-matercoin.compo
 import { BaseListaModule } from '../base-lista/base-lista.module';
 import { CardModule } from 'primeng/card';
 import {DropdownModule} from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
 
 
 
@@ -20,7 +23,10 @@ import {DropdownModule} from 'primeng/dropdown';
     FormsModule,
     BaseListaModule,
     CardModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule,
+    InputTextModule,
+    CheckboxModule
   ]
 })
 export class MoedasModule { }
