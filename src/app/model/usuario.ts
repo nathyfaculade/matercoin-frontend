@@ -24,6 +24,6 @@ export interface Usuario {
 
     obs: string;
 
-    moedas: Moeda;
+    moedas: Moeda[];
 
 }

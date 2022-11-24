@@ -8,7 +8,7 @@ export interface Moeda {
     perdido: string;
     fabricacao: Date;
     vencimento: Date;
-    periodo: Periodo;
+    periodo: Periodo[];
     ativo: string;
     obs: string;
     usuario: Usuario;

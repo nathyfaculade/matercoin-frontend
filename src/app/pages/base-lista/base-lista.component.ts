@@ -35,6 +35,7 @@ export class BaseListaComponent<T, S extends AbstractService<T>>
         this.router.navigate([this.urlCad]);
     }
 
+
     carregar() {
         this.service.getAll(this.params).subscribe(lst => {
             this.objs = [...lst];

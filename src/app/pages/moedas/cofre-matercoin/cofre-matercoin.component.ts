@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Moeda } from 'src/app/model/moeda';
 import { Periodo } from 'src/app/model/periodo';
+import { Usuario } from 'src/app/model/usuario';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
-  selector: 'app-cofre-matercoin',
-  templateUrl: './cofre-matercoin.component.html',
-  styleUrls: ['./cofre-matercoin.component.scss']
+    selector: 'app-cofre-matercoin',
+    templateUrl: './cofre-matercoin.component.html',
+    styleUrls: ['./cofre-matercoin.component.scss'],
 })
 export class CofreMatercoinComponent implements OnInit {
     transferencias = 0;
@@ -13,11 +15,103 @@ export class CofreMatercoinComponent implements OnInit {
     alunos = 0;
     total = 0;
     descricao!: Periodo;
+    periodos: Periodo[] = [{
+        id: 0,
+        descricao: 'SINF2NA',
+    }];
 
-    moeda: Moeda[] = [];
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+    usuarios: Usuario[] = [
+        {
+            id: 0,
+            tipo: 0,
+            nome: 'Nathiely',
+            ra: '',
+            senha: '',
+            email: '',
+            contato: '',
+            ativo: '',
+            saldo: 0,
+            condicoes: '',
+            obs: '',
+            moedas: [],
+        },
+        {
+            id: 0,
+            tipo: 0,
+            nome: '',
+            ra: '',
+            senha: '',
+            email: '',
+            contato: '',
+            ativo: '',
+            saldo: 0,
+            condicoes: '',
+            obs: '',
+            moedas: [
+                {
+                    id: 0,
+                    nroSerie: '',
+                    perdido: '',
+                    fabricacao: new Date(),
+                    vencimento: undefined,
+                    periodo: undefined,
+                    ativo: 'V',
+                    obs: '',
+                    usuario: undefined,
+                    createdAt: undefined,
+                    updatedAt: undefined,
+                    lote: '',
+                },
+            ],
+        },
+    ];
+    usuario: Usuario = {
+        id: 0,
+        tipo: 0,
+        nome: '',
+        ra: '',
+        senha: '',
+        email: '',
+        contato: '',
+        ativo: '',
+        saldo: 0,
+        condicoes: '',
+        obs: '',
+        moedas: undefined,
+    };
 
+    moeda: Moeda[] = [
+        {
+            id: 0,
+            nroSerie: '',
+            perdido: '',
+            fabricacao: new Date(),
+            vencimento: undefined,
+            periodo: undefined,
+            ativo: 'V',
+            obs: '',
+            usuario: undefined,
+            createdAt: undefined,
+            updatedAt: undefined,
+            lote: '',
+        },
+        {
+            id: 0,
+            nroSerie: '',
+            perdido: '',
+            fabricacao: new Date(),
+            vencimento: undefined,
+            periodo: undefined,
+            ativo: 'V',
+            obs: '',
+            usuario: undefined,
+            createdAt: undefined,
+            updatedAt: undefined,
+            lote: '',
+        },
+    ];
+    constructor() {}
+
+    ngOnInit(): void {}
 }
