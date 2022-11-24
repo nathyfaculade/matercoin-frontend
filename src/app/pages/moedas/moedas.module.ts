@@ -10,6 +10,9 @@ import {DropdownModule} from 'primeng/dropdown';
 import { CalendarModule } from 'primeng/calendar';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
+import { ButtonModule } from 'primeng/button';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -26,7 +29,10 @@ import { CheckboxModule } from 'primeng/checkbox';
     DropdownModule,
     CalendarModule,
     InputTextModule,
-    CheckboxModule
+    InputNumberModule,
+    CheckboxModule,
+    ButtonModule,
+    TableModule
   ]
 })
 export class MoedasModule { }

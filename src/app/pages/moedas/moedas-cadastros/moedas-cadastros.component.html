@@ -1,4 +1,12 @@
 <p-card>
+    <div class="grid">
+        <div class="col-fixed">
+            <i class="pi pi-filter"></i>
+        </div>
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3">Identificação</span>
+        </div>
+    </div>
     <div class="p-fluid grid">
         <div class="col-3 lg:col-2">
             <label for="dtLote">Data</label>
@@ -11,6 +19,56 @@
         <div class="col-3 lg:col-2 flex align-items-center">
             <p-checkbox name="cbLote" label="Lote ativo" trueValue="V" falseValue="F" [binary]="true"
                 [(ngModel)]="dadosLote.ativo"></p-checkbox>
+        </div>
+    </div>
+</p-card>
+<br>
+<p-card>
+    <div class="grid">
+        <div class="col-fixed">
+            <i class="pi pi-filter"></i>
+        </div>
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3">Cadastro de moedas</span>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-12">Para cadastrar novas moedas, insira os números de série inicial e final fabricados.</div>
+    </div>
+    <div class="p-fluid grid">
+        <div class="col-3 lg:col-2">
+            <label for="txtSerieInicial">Série inicial</label>
+            <p-inputNumber id="txtSerieInicial" [(ngModel)]="serieInicial"></p-inputNumber>
+        </div>
+        <div class="col-3 lg:col-2">
+            <label for="txtSerieFinal">Série final</label>
+            <p-inputNumber id="txtSerieFinal" [max]="20" [(ngModel)]="serieFinal"></p-inputNumber>
+        </div>
+        <div class="col-3 lg:col-2 flex align-items-end">
+            <button pButton label="Adicionar" (click)="adicionarMoedas()"></button>
+        </div>
+        <div class="col-12">
+            <p-table [value]="objs">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Situação</th>
+                        <th>Número de série</th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-m>
+                    <tr>
+                        <td>
+                            <p-checkbox name="cbLote" trueValue="V" falseValue="F" [binary]="true"
+                                [(ngModel)]="m.ativo"></p-checkbox>
+                        </td>
+                        <td>{{m.nroSerie}}</td>
+                        <td><button style="width: 100px;" pButton pRipple type="button" label="Excuir" (click)="excluirMoeda(m)"
+                                class="p-button-danger p-button-text"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
         </div>
     </div>
 </p-card>
