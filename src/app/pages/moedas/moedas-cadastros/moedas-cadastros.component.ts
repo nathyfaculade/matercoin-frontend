@@ -53,7 +53,38 @@ export class MoedasCadastrosComponent implements OnInit {
         updatedAt: undefined,
         lote: ''
     };
-    constructor() { }
 
+    objs: Moeda[] = [];
+
+    serieInicial: number = 0;
+    serieFinal: number = 10;
+    
+    adicionarMoedas() {
+        const result = [];
+        for (let i = this.serieInicial; i <= this.serieFinal; i++) {
+            const moeda: Moeda = {
+                id: (i*-1),
+                nroSerie: this.dadosLote.lote + i,
+                perdido: 'F',
+                fabricacao: this.dadosLote.fabricacao,
+                vencimento: undefined,
+                periodo: undefined,
+                ativo: 'V',
+                obs: '',
+                usuario: undefined,
+                createdAt: undefined,
+                updatedAt: undefined
+            }
+            result.push(moeda);
+        }
+        this.objs = [...result]
+    }
+
+    excluirMoeda(val) {
+        this.objs = [...this.objs.filter(o => o.id != val.id)];
+    }
+
+    constructor() { }
+    
     ngOnInit(): void { }
 }
