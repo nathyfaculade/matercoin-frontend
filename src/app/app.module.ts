@@ -18,6 +18,7 @@ import { BaseCadastroComponent } from './pages/base-cadastro/base-cadastro.compo
 import { MoedasModule } from './pages/moedas/moedas.module';
 import { CofreMatercoinComponent } from './pages/moedas/cofre-matercoin/cofre-matercoin.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -31,7 +32,8 @@ import { BrowserModule } from '@angular/platform-browser';
         PaginaInicialModule,
         MoedasModule,
         CommonModule,
-        BrowserModule
+        BrowserModule,
+        NgxSpinnerModule
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

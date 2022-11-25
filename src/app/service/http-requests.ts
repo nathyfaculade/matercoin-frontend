@@ -13,8 +13,10 @@ export interface IHttpRequest<T> {
     uri(uri: string): IHttpRequest<T>;
     header(header: string, value: string): IHttpRequest<T>;
     param(param: string, value: string): IHttpRequest<T>;
+    body(val: T): IHttpRequest<T>
     doGet(): Observable<T>;
     doPost(): Observable<T>;
+    doPostBody(): Observable<T>;
     doPut(): Observable<T>;
     doDelete(): Observable<T>;
 }
@@ -25,6 +27,7 @@ export class HttpRequest<T> implements IHttpRequest<T> {
     private _uri!: string;
     private _headers: { name: string, value: string }[] = [];
     private _params: { name: string, value: string }[] = [];
+    private _body: T;
 
     constructor(private http: HttpClient) {
 
@@ -65,6 +68,12 @@ export class HttpRequest<T> implements IHttpRequest<T> {
         return headers;
     }
 
+    body(val: T): IHttpRequest<T> {
+        this._body = val;
+        return this
+    }
+
+
     private params(): URLSearchParams {
         let params = new URLSearchParams();
         for (let i = 0; i < this._params.length; i++) {
@@ -100,6 +109,17 @@ export class HttpRequest<T> implements IHttpRequest<T> {
 
         return this.http.post<T>(this.fullUrl(), this.params().toString(), { headers: h });
     }
+
+    doPostBody(): Observable<T> {
+        let h = this.headers();
+        // if (!h.has('Content-Type')) {
+        //     h = h.append('Content-Type', 'application/x-www-form-urlencoded');
+        // }
+
+        return this.http.post<T>(this.fullUrl(), this._body, { headers: h });
+    }
+
+    
     doPut(): Observable<T> {
         let h = this.headers();
         if (!h.has('Content-Type')) {

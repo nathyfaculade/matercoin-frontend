@@ -35,6 +35,33 @@ export abstract class AbstractService<T> {
       .doGet();
   }
 
+  save(obj: T) {
+    return new HttpRequest<any>(this.http)
+      .endpoint(this.endpoint)
+      .body(obj)
+      .doPostBody();
+  }
+
+  saveP(obj): Promise<T> {
+    return new Promise((resolve, reject) => {
+      this.save(obj).subscribe(ret => {
+        resolve(ret)
+      }, e => {
+        reject(e);
+      })
+    })
+  }
+
+  saveAll(objs: T[]): Promise<T[]> {
+    const retorno = [];
+    for (const o of objs) {
+      retorno.push(this.saveP(o));
+    }
+    return Promise.all<T>(retorno);
+  }
+
+
+
   constructor(http: HttpClient) {
     this.http = http;
   }

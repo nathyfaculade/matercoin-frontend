@@ -13,6 +13,9 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { ButtonModule } from 'primeng/button';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { TableModule } from 'primeng/table';
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -32,7 +35,10 @@ import { TableModule } from 'primeng/table';
     InputNumberModule,
     CheckboxModule,
     ButtonModule,
-    TableModule
-  ]
+    TableModule,
+    ToastModule,
+    MessagesModule
+  ],
+  providers:[MessageService]
 })
 export class MoedasModule { }

@@ -11,7 +11,7 @@ export interface Moeda {
     periodo: Periodo[];
     ativo: string;
     obs: string;
-    usuario: Usuario;
+    usuario: any;
     createdAt: Date;
     updatedAt: Date;
     lote?
