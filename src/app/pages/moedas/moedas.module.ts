@@ -17,13 +17,20 @@ import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { MessageService } from 'primeng/api';
 
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.component';
 
 
 @NgModule({
   declarations: [
     MoedasListaComponent,
     MoedasCadastrosComponent,
+<<<<<<< Updated upstream
     CofreMatercoinComponent
+=======
+    MoedasRastreioComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     CommonModule,
@@ -38,8 +45,9 @@ import { MessageService } from 'primeng/api';
     ButtonModule,
     TableModule,
     ToastModule,
-    MessagesModule
+    MessagesModule,
+    ConfirmDialogModule
   ],
-  providers:[MessageService]
+  providers:[MessageService, ConfirmationService]
 })
 export class MoedasModule { }
