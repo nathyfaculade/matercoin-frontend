@@ -24,7 +24,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, CofreMatercoinComponent
+        AppComponent, NotfoundComponent
     ],
     imports: [
         AppRoutingModule,
