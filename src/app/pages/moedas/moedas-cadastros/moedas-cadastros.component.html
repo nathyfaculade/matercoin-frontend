@@ -6,31 +6,18 @@
 
 <p-card>
     <div class="grid">
-        <!-- <div class="col-fixed">
-            <i class="pi pi-filter"></i>
-        </div> -->
         <div class="col">
             <span class="block text-cyan-600 font-medium mb-3">Lote</span>
         </div>
     </div>
     <div class="p-fluid grid">
-        <!-- <div class="col-3 lg:col-2">
-            <label for="dtLote">Data</label>
-            <p-calendar [(ngModel)]="dadosLote.fabricacao" [showIcon]="true" inputId="dtLote"></p-calendar>
-        </div> -->
-        <!-- <div class="col-3 lg:col-2">
-            <label for="dtLoteVcto">Vencimento</label>
-            <p-calendar [(ngModel)]="dadosLote.vencimento" [showIcon]="true" inputId="dtLoteVcto"></p-calendar>
-        </div> -->
         <div class="col-3 lg:col-2">
-            <!-- <label for="txLote">Lote</label> -->
             <p-dropdown
                 id="drop-lotes"
                 (ngModelChange)="getLoteTimeout()"
                 [options]="lotes"
                 [(ngModel)]="dadosLote.lote"
             ></p-dropdown>
-            <!-- <input type="text" pInputText id="txLote" [(ngModel)]="dadosLote.lote" /> -->
         </div>
         <div class="col-3 lg:col-2 flex align-items-center">
             <p-checkbox
@@ -48,9 +35,6 @@
 <br />
 <p-card>
     <div class="grid">
-        <!-- <div class="col-fixed">
-            <i class="pi pi-filter"></i>
-        </div> -->
         <div class="col">
             <span class="block text-cyan-600 font-medium mb-3"
                 >Cadastro de moedas</span

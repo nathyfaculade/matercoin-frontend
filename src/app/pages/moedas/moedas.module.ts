@@ -20,6 +20,7 @@ import { MessageService } from 'primeng/api';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.component';
+import { MoedasTransferenciaComponent } from './moedas-transferencia/moedas-transferencia.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.compo
     MoedasListaComponent,
     MoedasCadastrosComponent,
     CofreMatercoinComponent,
-    MoedasRastreioComponent
+    MoedasRastreioComponent,
+    MoedasTransferenciaComponent
   ],
   imports: [
     CommonModule,

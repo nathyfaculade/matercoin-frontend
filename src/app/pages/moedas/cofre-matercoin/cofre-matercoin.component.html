@@ -1,3 +1,9 @@
+<div class="grid">
+    <div class="col-fixed">
+        <button pButton class="p-button-success" label="Nova transferência" (click)="novaTransferencia()"></button>
+    </div>
+</div>
+<hr>
 <div *ngFor="let p of periodos">
     <H3>{{ p.descricao }}</H3>
     <div class="grid">
@@ -35,5 +41,4 @@
             </div>
         </div>
     </div>
-
 </div>

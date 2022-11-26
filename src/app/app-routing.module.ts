@@ -7,6 +7,7 @@ import { MoedasListaComponent } from './pages/moedas/moedas-lista/moedas-lista.c
 import { CofreMatercoinComponent } from './pages/moedas/cofre-matercoin/cofre-matercoin.component';
 import { MoedasCadastrosComponent } from './pages/moedas/moedas-cadastros/moedas-cadastros.component';
 import { MoedasRastreioComponent } from './pages/moedas/moedas-rastreio/moedas-rastreio.component';
+import { MoedasTransferenciaComponent } from './pages/moedas/moedas-transferencia/moedas-transferencia.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { MoedasRastreioComponent } from './pages/moedas/moedas-rastreio/moedas-r
                     { path: 'cad-moedas', component: MoedasCadastrosComponent},
                     { path: 'cofre-matercoin', component: CofreMatercoinComponent},
                     { path: 'moedas-rastreio', component: MoedasRastreioComponent},
+                    { path: 'moedas-transferencia', component: MoedasTransferenciaComponent},
                     { path: 'dash', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UikitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },

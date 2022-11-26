@@ -3,6 +3,7 @@ import { Moeda } from 'src/app/model/moeda';
 import { Periodo } from 'src/app/model/periodo';
 import { Usuario } from 'src/app/model/usuario';
 import {ButtonModule} from 'primeng/button';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-cofre-matercoin',
@@ -111,7 +112,11 @@ export class CofreMatercoinComponent implements OnInit {
             lote: '',
         },
     ];
-    constructor() {}
+    constructor(private router: Router) {}
+
+    novaTransferencia() {
+        this.router.navigateByUrl('moedas-transferencia')
+    }
 
     ngOnInit(): void {}
 }

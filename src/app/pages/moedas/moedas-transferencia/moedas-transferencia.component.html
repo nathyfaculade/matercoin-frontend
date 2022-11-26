@@ -1,0 +1,57 @@
+<p-toast></p-toast>
+<p-confirmDialog
+    header="Confirmation"
+    icon="pi pi-exclamation-triangle"
+></p-confirmDialog>
+
+<p-card>
+    <div class="grid">
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3"
+                >Transferência de MaterCoin</span
+            >
+        </div>
+    </div>
+    <div class="p-fluid grid">
+        <div class="col-3 lg:col-3">
+            <label for="dtTransferencia">Data de transferência</label>
+            <p-calendar
+                [(ngModel)]="obj.transferencia"
+                [showIcon]="true"
+                id="dtTransferencia"
+                dateFormat="dd/mm/yy"
+            ></p-calendar>
+        </div>
+        <div class="col-3 lg:col-6">
+            <label for="edtTurma">Turma</label>
+            <p-dropdown
+                [options]="periodos"
+                filterBy="descricao"
+                [filter]="true"
+                id="edtTurma"
+                [(ngModel)]="obj.periodo"
+                optionLabel="descricao"
+            ></p-dropdown>
+        </div>
+        <div class="col-3 lg:col-3">
+            <label for="edtTipoDestino">Tipo de destino</label>
+            <p-dropdown
+                [options]="tiposDestino"
+                id="edtTipoDestino"
+                [(ngModel)]="tipoDestino"
+            ></p-dropdown>
+        </div>
+        <div class="col-12">
+            <label for="edtDestino">Destino</label>
+            <p-dropdown
+                [options]="destinos"
+                filterBy="nome"
+                [filter]="true"
+                id="edtDestino"
+                [(ngModel)]="obj.destino"
+                optionLabel="nome"
+            ></p-dropdown>
+        </div>
+        <div class="col-3 lg:col-2 flex align-items-center"></div>
+    </div>
+</p-card>

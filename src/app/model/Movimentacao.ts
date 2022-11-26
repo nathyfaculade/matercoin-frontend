@@ -1,4 +1,5 @@
 import { Moeda } from "./moeda";
+import { Periodo } from "./periodo";
 import { Usuario } from "./usuario";
 
 export interface Movimentacao {
@@ -7,6 +8,7 @@ export interface Movimentacao {
     moeda: Moeda;
     origem: Usuario;
     destino: Usuario;
-    createdAt: Date;
-    updatedAt: Date;
+    periodo: Periodo;
+    createdAt?: Date;
+    updatedAt?: Date;
 }
