@@ -138,7 +138,7 @@
 
 :root {
   --blue-50:#f4fafe;
-  --blue-100:#cae6fc;
+  --blue-100:#cae6fc1a;
   --blue-200:#a0d2fa;
   --blue-300:#75bef8;
   --blue-400:#4baaf5;
@@ -148,7 +148,7 @@
   --blue-800:#125386;
   --blue-900:#0d3c61;
   --green-50:#f7faf5;
-  --green-100:#dbe8cf;
+  --green-100:#dbe8cf1a;
   --green-200:#bed6a9;
   --green-300:#a1c384;
   --green-400:#85b15e;
@@ -158,7 +158,7 @@
   --green-800:#39571f;
   --green-900:#2a4016;
   --yellow-50:#fffcf5;
-  --yellow-100:#fef0cd;
+  --yellow-100:#fef0cd1a;
   --yellow-200:#fde4a5;
   --yellow-300:#fdd87d;
   --yellow-400:#fccc55;
@@ -168,7 +168,7 @@
   --yellow-800:#8a6a19;
   --yellow-900:#644d12;
   --cyan-50:#f2fcfd;
-  --cyan-100:#c2eff5;
+  --cyan-100:#c2eff51a;
   --cyan-200:#91e2ed;
   --cyan-300:#61d5e4;
   --cyan-400:#30c9dc;
@@ -178,7 +178,7 @@
   --cyan-800:#006775;
   --cyan-900:#004b55;
   --pink-50:#fef4f7;
-  --pink-100:#fac9da;
+  --pink-100:#fac9da1a;
   --pink-200:#f69ebc;
   --pink-300:#f1749e;
   --pink-400:#ed4981;
@@ -188,7 +188,7 @@
   --pink-800:#801136;
   --pink-900:#5d0c28;
   --indigo-50:#f6f7fc;
-  --indigo-100:#d5d9ef;
+  --indigo-100:#d5d9ef1a;
   --indigo-200:#b3bae2;
   --indigo-300:#919cd5;
   --indigo-400:#707dc8;
@@ -198,7 +198,7 @@
   --indigo-800:#2b3467;
   --indigo-900:#1f264b;
   --teal-50:#f2faf9;
-  --teal-100:#c2e6e2;
+  --teal-100:#c2e6e21a;
   --teal-200:#91d2cc;
   --teal-300:#61beb5;
   --teal-400:#30aa9f;
@@ -208,7 +208,7 @@
   --teal-800:#00534b;
   --teal-900:#003c36;
   --orange-50:#fffaf2;
-  --orange-100:#ffe6c2;
+  --orange-100:#ffe6c21a;
   --orange-200:#ffd391;
   --orange-300:#ffbf61;
   --orange-400:#ffac30;
@@ -228,7 +228,7 @@
   --bluegray-800:#35454c;
   --bluegray-900:#263238;
   --purple-50:#faf4fb;
-  --purple-100:#e7cbec;
+  --purple-100:#e7cbec1a;
   --purple-200:#d4a2dd;
   --purple-300:#c279ce;
   --purple-400:#af50bf;
@@ -238,7 +238,7 @@
   --purple-800:#561561;
   --purple-900:#3e1046;
   --red-50:#fef6f5;
-  --red-100:#fcd2cf;
+  --red-100:#fcd2cf1a;
   --red-200:#faaea9;
   --red-300:#f88a82;
   --red-400:#f6675c;
@@ -248,7 +248,7 @@
   --red-800:#86251e;
   --red-900:#621b16;
   --primary-50:#fafbfd;
-  --primary-100:#e8eaf6;
+  --primary-100:#e8eaf61a;
   --primary-200:#d6daef;
   --primary-300:#c3c9e8;
   --primary-400:#b1b9e1;
@@ -4120,7 +4120,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   color: rgba(255, 255, 255, 0.6);
 }
 .p-card .p-card-content {
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 .p-card .p-card-footer {
   padding: 1rem 0 0 0;
