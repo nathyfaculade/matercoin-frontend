@@ -1,5 +1,5 @@
-export interface ISearchParam { 
+export interface ISearchParam {
     paramName: string;
-    paramValue: string;
+    paramValue: any;
     compareType: string;
 }

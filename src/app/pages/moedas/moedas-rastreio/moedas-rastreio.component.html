@@ -1,1 +1,52 @@
-<p>moedas-rastreio works!</p>
+<p-toast></p-toast>
+<p-confirmDialog
+    header="Confirmation"
+    icon="pi pi-exclamation-triangle"
+></p-confirmDialog>
+
+<p-card>
+    <div class="grid">
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3">Filtro</span>
+        </div>
+    </div>
+    <div class="p-fluid grid">
+        <div class="col-3 lg:col-2">
+            <label for="edtMoeda">Moeda</label>
+            <p-dropdown
+                [options]="moedas"
+                filterBy="nroSerie"
+                [filter]="true"
+                id="edtMoeda"
+                (onChange)="changeMoeda($event)"
+                [(ngModel)]="moeda"
+                optionLabel="nroSerie"
+            ></p-dropdown>
+        </div>
+    </div>
+</p-card>
+<br />
+<p-card>
+    <div class="grid">
+        <div class="col">
+            <span class="block text-cyan-600 font-medium mb-3"
+                >Rastreio de MaterCoin</span
+            >
+        </div>
+    </div>
+    <div class="grid">
+        <div class="col-12">
+            <p-timeline [value]="movimentos">
+                <ng-template pTemplate="content" let-event>
+                    <small class="p-text-secondary"
+                        ><b>{{ event.origem.nome }}</b> transferiu para
+                        <b>{{ event.destino.nome }}</b>
+                    </small>
+                </ng-template>
+                <ng-template pTemplate="opposite" let-event>
+                    {{ event.transferencia | date: "dd/MM/yyy" }}
+                </ng-template>
+            </p-timeline>
+        </div>
+    </div>
+</p-card>

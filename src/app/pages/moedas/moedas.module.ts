@@ -21,6 +21,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.component';
 import { MoedasTransferenciaComponent } from './moedas-transferencia/moedas-transferencia.component';
+import { TimelineModule } from 'primeng/timeline';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MoedasTransferenciaComponent } from './moedas-transferencia/moedas-tran
     TableModule,
     ToastModule,
     MessagesModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    TimelineModule
   ],
   providers:[MessageService, ConfirmationService]
 })

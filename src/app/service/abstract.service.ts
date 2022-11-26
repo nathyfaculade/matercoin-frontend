@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { __values } from 'tslib';
 import { HttpRequest, UriBuilder } from './http-requests';
+import { Usuario } from '../model/usuario';
 
 @Injectable({
     providedIn: 'root',
@@ -16,6 +17,16 @@ export abstract class AbstractService<T> {
     getToken(): string {
         const token = localStorage.getItem('auth');
         return token || '';
+    }
+
+    getIdUsuarioAtivo() {
+        const usuarioAtivo = localStorage.getItem('id-usuario');
+        return Number(usuarioAtivo) || 1;
+    }
+
+    getUsuarioAtivo() {
+        const u = { id: this.getIdUsuarioAtivo() };
+        return u as Usuario;
     }
 
     public static setToken(value: string) {

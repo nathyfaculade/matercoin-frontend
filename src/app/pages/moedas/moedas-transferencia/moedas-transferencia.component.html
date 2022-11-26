@@ -52,6 +52,35 @@
                 optionLabel="nome"
             ></p-dropdown>
         </div>
-        <div class="col-3 lg:col-2 flex align-items-center"></div>
+        <div class="col-12">
+            <label for="edtMoeda">Moeda</label>
+            <p-dropdown
+                [options]="moedas"
+                filterBy="nroSerie"
+                [filter]="true"
+                id="edtMoeda"
+                [(ngModel)]="obj.moeda"
+                optionLabel="nroSerie"
+            ></p-dropdown>
+        </div>
+
+        <div class="col-12"></div>
+        <div class="col"></div>
+        <div class="col-3 lg:col-2 flex align-items-end">
+            <button
+                class="p-button-outlined p-button-secondary"
+                pButton
+                label="Cancelar"
+                (click)="cancelar()"
+            ></button>
+        </div>
+        <div class="col-fixed flex align-items-end">
+            <button
+                class="p-button-success"
+                pButton
+                label="Salvar Alterações"
+                (click)="salvar()"
+            ></button>
+        </div>
     </div>
 </p-card>
