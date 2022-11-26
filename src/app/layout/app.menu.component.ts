@@ -31,7 +31,7 @@ export class AppMenuComponent implements OnInit {
 
                     { label: 'Condições de troca', icon: 'pi pi-fw pi-ticket', routerLink: ['/usuario'] },
 
-                    { label: 'Baixa semestral', icon: 'pi pi-fw pi-pencil', routerLink: ['/usuario'] },
+                    // { label: 'Baixa semestral', icon: 'pi pi-fw pi-pencil', routerLink: ['/usuario'] },
 
                 ]
             },

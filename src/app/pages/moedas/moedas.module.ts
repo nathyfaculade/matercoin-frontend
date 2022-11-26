@@ -22,6 +22,7 @@ import {ConfirmationService} from 'primeng/api';
 import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.component';
 import { MoedasTransferenciaComponent } from './moedas-transferencia/moedas-transferencia.component';
 import { TimelineModule } from 'primeng/timeline';
+import { MovimentosComponent } from './movimentos/movimentos.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { TimelineModule } from 'primeng/timeline';
     MoedasCadastrosComponent,
     CofreMatercoinComponent,
     MoedasRastreioComponent,
-    MoedasTransferenciaComponent
+    MoedasTransferenciaComponent,
+    MovimentosComponent
   ],
   imports: [
     CommonModule,
