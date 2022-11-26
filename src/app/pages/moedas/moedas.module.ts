@@ -26,11 +26,8 @@ import { MoedasRastreioComponent } from './moedas-rastreio/moedas-rastreio.compo
   declarations: [
     MoedasListaComponent,
     MoedasCadastrosComponent,
-<<<<<<< Updated upstream
-    CofreMatercoinComponent
-=======
+    CofreMatercoinComponent,
     MoedasRastreioComponent
->>>>>>> Stashed changes
   ],
   imports: [
     CommonModule,
