@@ -75,6 +75,7 @@ export class MoedasCadastrosComponent implements OnInit {
     }
 
     getLote() {
+        this.objs = [];
         spinner(true);
         this.service
             .getAll([

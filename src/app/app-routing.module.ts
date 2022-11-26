@@ -9,6 +9,8 @@ import { MoedasCadastrosComponent } from './pages/moedas/moedas-cadastros/moedas
 import { MoedasRastreioComponent } from './pages/moedas/moedas-rastreio/moedas-rastreio.component';
 import { MoedasTransferenciaComponent } from './pages/moedas/moedas-transferencia/moedas-transferencia.component';
 import { MovimentosComponent } from './pages/moedas/movimentos/movimentos.component';
+import { CriteriosComponent } from './pages/usuario/criterios/criterios.component';
+import { CondicoesTrocaComponent } from './pages/usuario/condicoes-troca/condicoes-troca.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import { MovimentosComponent } from './pages/moedas/movimentos/movimentos.compon
                     { path: 'moedas-rastreio', component: MoedasRastreioComponent},
                     { path: 'movimentos', component: MovimentosComponent},
                     { path: 'moedas-transferencia', component: MoedasTransferenciaComponent},
+                    { path: 'meus-criterios', component: CriteriosComponent},
+                    { path: 'condicoes-troca', component: CondicoesTrocaComponent},
                     { path: 'dash', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },
                     { path: 'uikit', loadChildren: () => import('./demo/components/uikit/uikit.module').then(m => m.UikitModule) },
                     { path: 'utilities', loadChildren: () => import('./demo/components/utilities/utilities.module').then(m => m.UtilitiesModule) },

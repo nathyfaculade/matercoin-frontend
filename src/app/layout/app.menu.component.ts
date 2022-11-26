@@ -27,9 +27,9 @@ export class AppMenuComponent implements OnInit {
 
                     { label: 'Minhas movimentações', icon: 'pi pi-fw pi-chart-line', routerLink: ['/movimentos'] },
 
-                    { label: 'Meus critérios', icon: 'pi pi-fw pi-list', routerLink: ['/usuario'] },
+                    { label: 'Meus critérios', icon: 'pi pi-fw pi-list', routerLink: ['/meus-criterios'] },
 
-                    { label: 'Condições de troca', icon: 'pi pi-fw pi-ticket', routerLink: ['/usuario'] },
+                    { label: 'Condições de troca', icon: 'pi pi-fw pi-ticket', routerLink: ['/condicoes-troca'] },
 
                     // { label: 'Baixa semestral', icon: 'pi pi-fw pi-pencil', routerLink: ['/usuario'] },
 
