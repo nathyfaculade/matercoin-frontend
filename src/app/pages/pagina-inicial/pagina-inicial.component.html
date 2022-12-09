@@ -1,5 +1,5 @@
 <div class="grid">
-    <div class="col-12 lg:col-6 xl:col-3">
+    <div class="col-12 lg:col-6 xl:col-3" *ngIf="exibeTotais">
         <div class="card mb-0">
             <div class="flex justify-content-between mb-3">
                 <div>
@@ -22,7 +22,7 @@
             <span class="text-surface-900">Trocas realizadas neste mês</span>
         </div>
     </div>
-    <div class="col-12 lg:col-6 xl:col-3">
+    <div class="col-12 lg:col-6 xl:col-3" *ngIf="exibeTotais">
         <div class="card mb-0">
             <div class="flex justify-content-between mb-3">
                 <div>
@@ -44,7 +44,7 @@
             <span class="text-surface-900">MaterCoins com professores</span>
         </div>
     </div>
-    <div class="col-12 lg:col-6 xl:col-3">
+    <div class="col-12 lg:col-6 xl:col-3" *ngIf="exibeTotais">
         <div class="card mb-0">
             <div class="flex justify-content-between mb-3">
                 <div>
@@ -63,7 +63,7 @@
             <span class="text-surface-900">MaterCoins com alunos</span>
         </div>
     </div>
-    <div class="col-12 lg:col-6 xl:col-3">
+    <div class="col-12 lg:col-6 xl:col-3" *ngIf="exibeTotais">
         <div class="card mb-0">
             <div class="flex justify-content-between mb-3">
                 <div>
@@ -91,7 +91,7 @@
                 >
             </div>
 
-            <span class="block text-600 font-medium mb-3">Hoje</span>
+            <span class="block text-600 font-medium mb-3"></span>
             <ul class="p-0 mx-0 mt-0 mb-4 list-none">
                 <li
                     *ngFor="let item of movimentacoes"

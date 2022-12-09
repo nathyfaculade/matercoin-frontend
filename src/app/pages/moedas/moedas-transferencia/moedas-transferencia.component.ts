@@ -43,6 +43,13 @@ export class MoedasTransferenciaComponent implements OnInit {
 
     ngOnInit(): void {
         this.obj.origem = this.moedaService.getUsuarioAtivo();
+        const sp = [
+            {
+                paramName: 'usuario.id',
+                paramValue: [this.moedaService.getIdUsuarioAtivo()],
+                compareType: "EQUAL"
+            }
+        ]
         this.periodoService.getAll([]).subscribe({
             next: (v) => {
                 if (v) {
@@ -57,7 +64,7 @@ export class MoedasTransferenciaComponent implements OnInit {
                 }
             },
         });
-        this.moedaService.getAll([]).subscribe({
+        this.moedaService.getAll(sp).subscribe({
             next: (v) => {
                 if (v) {
                     this.moedas = v;

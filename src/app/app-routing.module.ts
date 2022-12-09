@@ -11,6 +11,7 @@ import { MoedasTransferenciaComponent } from './pages/moedas/moedas-transferenci
 import { MovimentosComponent } from './pages/moedas/movimentos/movimentos.component';
 import { CriteriosComponent } from './pages/usuario/criterios/criterios.component';
 import { CondicoesTrocaComponent } from './pages/usuario/condicoes-troca/condicoes-troca.component';
+import { AuthGuardAluno, AuthGuardCoordenador, AuthGuardProfessor } from './service/auth-guard';
 
 
 @NgModule({
@@ -21,12 +22,12 @@ import { CondicoesTrocaComponent } from './pages/usuario/condicoes-troca/condico
                 children: [
                     { path: '', component: PaginaInicialComponent },
                     //Cadastro de moedas
-                    { path: 'moedas', component: MoedasListaComponent},
-                    { path: 'cad-moedas', component: MoedasCadastrosComponent},
-                    { path: 'cofre-matercoin', component: CofreMatercoinComponent},
-                    { path: 'moedas-rastreio', component: MoedasRastreioComponent},
-                    { path: 'movimentos', component: MovimentosComponent},
-                    { path: 'moedas-transferencia', component: MoedasTransferenciaComponent},
+                    { path: 'moedas', component: MoedasListaComponent, canActivate: [AuthGuardCoordenador]},
+                    { path: 'cad-moedas', component: MoedasCadastrosComponent, canActivate: [AuthGuardCoordenador]},
+                    { path: 'cofre-matercoin', component: CofreMatercoinComponent, canActivate: [AuthGuardAluno]},
+                    { path: 'moedas-rastreio', component: MoedasRastreioComponent, canActivate: [AuthGuardCoordenador]},
+                    { path: 'movimentos', component: MovimentosComponent, canActivate: [AuthGuardAluno]},
+                    { path: 'moedas-transferencia', component: MoedasTransferenciaComponent, canActivate: [AuthGuardAluno]},
                     { path: 'meus-criterios', component: CriteriosComponent},
                     { path: 'condicoes-troca', component: CondicoesTrocaComponent},
                     { path: 'dash', loadChildren: () => import('./demo/components/dashboard/dashboard.module').then(m => m.DashboardModule) },

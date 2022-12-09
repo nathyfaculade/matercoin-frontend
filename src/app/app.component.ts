@@ -4,9 +4,20 @@ import { PrimeNGConfig } from 'primeng/api';
 import { AbstractService } from './service/abstract.service';
 import { UsuarioService } from './service/usuario.service';
 
+export enum ETipoUsuario {
+    ALUNO,
+    PROFESSOR,
+    COORDENADOR,
+    PROFESSOR_COORDENADOR
+}
+
 export const spinner = (value) => {
     showSpinner = value;
 };
+
+export const acesso = {
+    perfil: ETipoUsuario.ALUNO
+}
 
 export var showSpinner = false;
 
@@ -44,10 +55,13 @@ export class AppComponent {
     }
 
     ngOnInit() {
+        spinner(true);
         this.getToken().then((t) => {
+            spinner(false);
             this.service.validateToken(t).subscribe((v) => {
                 localStorage.setItem('id-usuario', v.userId);
                 localStorage.setItem('username', v.username);
+                acesso.perfil = v.role;
             });
         });
 

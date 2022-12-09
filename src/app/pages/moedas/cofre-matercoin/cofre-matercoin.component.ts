@@ -4,6 +4,7 @@ import { Periodo } from 'src/app/model/periodo';
 import { Usuario } from 'src/app/model/usuario';
 import {ButtonModule} from 'primeng/button';
 import { Router } from '@angular/router';
+import { MoedasService } from 'src/app/service/moedas.service';
 
 @Component({
     selector: 'app-cofre-matercoin',
@@ -18,7 +19,7 @@ export class CofreMatercoinComponent implements OnInit {
     descricao!: Periodo;
     periodos: Periodo[] = [{
         id: 0,
-        descricao: 'SINF2NA',
+        descricao: 'Minhas moedas',
     }];
 
 
@@ -112,11 +113,26 @@ export class CofreMatercoinComponent implements OnInit {
             lote: '',
         },
     ];
-    constructor(private router: Router) {}
+    constructor(private router: Router, private moedaService: MoedasService) {}
 
     novaTransferencia() {
         this.router.navigateByUrl('moedas-transferencia')
     }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        const sp = [
+            {
+                paramName: 'usuario.id',
+                paramValue: [this.moedaService.getIdUsuarioAtivo()],
+                compareType: "EQUAL"
+            }
+        ]
+        this.moedaService.getAll(sp).subscribe((ret) => {
+            if (ret) {
+                this.moeda = [...ret]
+            } else {
+                this.moeda = [];
+            }
+        })
+    }
 }

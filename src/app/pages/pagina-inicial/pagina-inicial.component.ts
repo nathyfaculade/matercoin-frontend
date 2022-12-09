@@ -14,6 +14,7 @@ export class PaginaInicialComponent implements OnInit {
   professores = 0;
   alunos = 0;
   total = 0;
+  exibeTotais = false;
 
   movimentacoes: Movimentacao[] = [];
 
